@@ -4,12 +4,6 @@ pipeline {
         DOCKER_IMAGE_NAME = "daggu1997/train"
     }
     stages {
-        stage('Clean') {
-            steps {
-                deleteDir() // Clean the workspace
-                sh 'echo "Clean the repository"' // Display message about cleaning the repository
-            }
-        }
         stage('Build') {
             steps {
                 echo 'Running build automation'
@@ -43,6 +37,12 @@ pipeline {
                         app.push("latest")
                     }
                 }
+            }
+        }
+        stage('Clean') {
+            steps {
+                deleteDir() // Clean the workspace
+                sh 'echo "Clean the repository"' // Display message about cleaning the repository
             }
         }
     }

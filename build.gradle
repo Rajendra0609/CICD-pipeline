@@ -20,7 +20,7 @@ task zip(type: Zip) {
     include "views/**"
   }
    archiveFileName = "train.zip"
-    into("zips")
+   destinationDirectory = file("$buildDir/zips/train.zip")
 }
 
 build.dependsOn zip

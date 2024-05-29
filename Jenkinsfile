@@ -9,7 +9,7 @@ pipeline {
                 echo 'Running build automation'
                 sh 'chmod +x gradlew'
                 sh './gradlew build --no-daemon'
-                archiveArtifacts artifacts: 'dist/trainSchedule.zip'
+                archiveArtifacts artifacts: 'dist/trainSchedule/trainSchedule.zip'
             }
         }
         stage('Build Docker Image') {

@@ -19,7 +19,7 @@ task zip(type: Zip) {
     include "routes/**"
     include "views/**"
   }
-   destinationDirectory = file("dist/train/")
+   destinationDirectory = file("dist/trainSchedule.zip")
    archiveFileName = "trainSchedule.zip"
 }
 

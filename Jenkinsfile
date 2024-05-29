@@ -13,14 +13,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Running build automation'
-                sh 'chmod +x gradlew'
                 sh './gradlew build --no-daemon'
             }
         }
         stage('test') {
             steps {
                 echo 'Running test automation'
-                sh 'chmod +x gradlew'
                 sh './gradlew npm_test'
           }
         }

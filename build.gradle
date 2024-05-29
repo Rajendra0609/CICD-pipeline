@@ -9,7 +9,7 @@ node {
 
 task build
 
-task zip(type: Zip) {
+task zip(type: zip) {
   from '.' {
     include '*'
     include 'bin/**'
